@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "password is liquid."
-exec ssh liquid@localhost -p 10022
+exec ssh liquid@liquid.example.org -p 10022
