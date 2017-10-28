@@ -12,11 +12,11 @@ for program in $PROGRAM_LIST; do
 done
 
 # download dependencies
-if [ -d "factory" ]; then
+if [ ! -d "factory" ]; then
 	git clone $FACTORY_REPO
 fi
 
-if [ -d "web-ui" ]; then
+if [ ! -d "web-ui" ]; then
 	git clone $WEB_UI_REPO
 fi
 
