@@ -2,7 +2,7 @@
 factory/factory --platform liquid-cloud-x86_64 \
 	run \
 	--smp 4 \
-	--memory 2048 \
+	--memory 4096 \
 	--share guest-scripts:/mnt/scripts \
 	--share web-ui:/opt/web-ui \
 	--tcp 10080:80 \
