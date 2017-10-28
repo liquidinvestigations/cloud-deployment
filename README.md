@@ -10,13 +10,15 @@ Downloads and sets up VMs to work on the `web-ui` repo in the Liquid Investigati
 4. Run `./socat.sh` to do port forwarding.
 5. Add the following lines to your `/etc/hosts` file:
 
-	127.0.0.1 liquid.example.org
-	127.0.0.1 hoover.liquid.example.org
-	127.0.0.1 davros.liquid.example.org
-	127.0.0.1 dokuwiki.liquid.example.org
-	127.0.0.1 matrix.liquid.example.org
-	127.0.0.1 hypothesis.liquid.example.org
-	127.0.0.1 client.hypothesis.liquid.example.org
+```
+127.0.0.1 liquid.example.org
+127.0.0.1 hoover.liquid.example.org
+127.0.0.1 davros.liquid.example.org
+127.0.0.1 dokuwiki.liquid.example.org
+127.0.0.1 matrix.liquid.example.org
+127.0.0.1 hypothesis.liquid.example.org
+127.0.0.1 client.hypothesis.liquid.example.org
+```
 
 6. Open up `http://liquid.example.org` in your browser. The home page should load.
 
