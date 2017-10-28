@@ -4,7 +4,7 @@ Downloads and sets up VMs to work on the `web-ui` repo in the Liquid Investigati
 
 ## Steps
 
-1. Install all dependencies marked in [the factory readme](https://github.com/liquidinvestigations/factory). If kitchen is not working, compile the latest ruby from source.
+1. Install `socat`. Then, install all dependencies marked in [the factory readme](https://github.com/liquidinvestigations/factory). If kitchen is not working, compile the latest ruby from source.
 2. Run `./download_liquid.sh`.
 3. Run `./launch_liquid.sh` and wait for it to boot.
 4. Run `./socat.sh` to do port forwarding.
