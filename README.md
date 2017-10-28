@@ -21,5 +21,6 @@ Downloads and sets up VMs to work on the `web-ui` repo in the Liquid Investigati
 ```
 
 6. Open up `http://liquid.example.org` in your browser. The home page should load.
+7. Connect to the thing via `ssh liquid@localhost -p 10022` with password liquid. You have sudo.
 
 The `web-ui` folder will be shared with the VM's `/opt/web-ui` dir.
