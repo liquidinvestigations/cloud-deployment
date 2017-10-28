@@ -8,3 +8,7 @@ LIQUID_CLOUD=https://jenkins.liquiddemo.org/job/liquidinvestigations/job/setup/v
 mkdir -pv factory/images/liquid-cloud-x86_64
 curl -L $LIQUID_CLOUD | xzcat > factory/images/liquid-cloud-x86_64/disk.img
 echo '{"login": {"username": "liquid", "password": "liquid"}}' > factory/images/liquid-cloud-x86_64/config.json
+
+set +x
+echo ""
+echo "DONE: Downloaded liquid-cloud image"
