@@ -21,4 +21,3 @@ if [ ! -d "web-ui" ]; then
 fi
 
 ( cd factory; git checkout master; git pull )
-( cd web-ui; git checkout master; git pull )
