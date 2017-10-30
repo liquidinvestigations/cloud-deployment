@@ -1,9 +1,9 @@
 #!/bin/bash -ex
 
-WEB_UI_REPO=https://github.com/liquidinvestigations/web-ui.git
+CORE_REPO=https://github.com/liquidinvestigations/core.git
 
-if [ ! -d "web-ui" ]; then
-	git clone $WEB_UI_REPO
+if [ ! -d "core" ]; then
+	git clone $CORE_REPO
 fi
 
 factory/factory --platform liquid-cloud-x86_64 \
@@ -11,7 +11,7 @@ factory/factory --platform liquid-cloud-x86_64 \
 	--smp 4 \
 	--memory 4096 \
 	--share guest-scripts:/mnt/scripts \
-	--share web-ui:/opt/web-ui \
+	--share core:/opt/liquid-core/liquid-core \
 	--tcp 10080:80 \
 	--tcp 10022:22 \
 	/mnt/scripts/liquid_vm_boot.sh
