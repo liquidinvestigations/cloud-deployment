@@ -6,8 +6,13 @@ LIQUID_CLOUD=https://jenkins.liquiddemo.org/job/liquidinvestigations/job/setup/v
 
 # download the liquid vm
 mkdir -pv factory/images/liquid-cloud-x86_64
-curl -L $LIQUID_CLOUD | xzcat > factory/images/liquid-cloud-x86_64/disk.img
-echo '{"login": {"username": "liquid", "password": "liquid"}}' > factory/images/liquid-cloud-x86_64/config.json
+(
+  cd factory/images/liquid-cloud-x86_64
+  curl -L $LIQUID_CLOUD > disk.img.xz
+  xzcat disk.img.xz > disk.img
+  rm disk.img.xz
+  echo '{"login": {"username": "liquid", "password": "liquid"}}' > config.json
+)
 
 set +x
 echo ""
