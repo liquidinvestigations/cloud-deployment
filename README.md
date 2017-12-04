@@ -4,7 +4,7 @@ Downloads and sets up VMs to work on the `web-ui` repo in the Liquid Investigati
 
 ## Steps for UI development
 
-1. Install `socat`. Then, install all dependencies marked in [the factory readme](https://github.com/liquidinvestigations/factory). If kitchen is not working, compile the latest ruby from source.
+1. Install `socat`. Then, install all dependencies marked in [the factory readme](https://github.com/liquidinvestigations/factory).
 2. Run `./download_liquid.sh`.
 3. Run `./launch_web_ui.sh` and wait for it to boot.
 4. Run `./socat.sh` to do port forwarding.
@@ -20,8 +20,8 @@ Downloads and sets up VMs to work on the `web-ui` repo in the Liquid Investigati
 127.0.0.1 client.hypothesis.liquid.example.org
 ```
 
-6. Open up `http://liquid.example.org` in your browser. The home page should load.
-7. Connect to the thing via `ssh liquid@localhost -p 10022` with password liquid. You have sudo.
+6. Open up `http://liquid.example.org` in your browser. The welcome form should load.
+7. Connect to the thing via `./ssh.sh` with password liquid. You have sudo.
 
 The `web-ui` folder will be shared with the VM's `/opt/web-ui` dir.
 

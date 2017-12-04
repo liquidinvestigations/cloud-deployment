@@ -4,7 +4,7 @@ FACTORY_REPO=https://github.com/liquidinvestigations/factory.git
 WEB_UI_REPO=https://github.com/liquidinvestigations/web-ui.git
 UI_TEMPLATES_REPO=https://github.com/liquidinvestigations/ui-templates.git
 
-PROGRAM_LIST="git curl wget kitchen qemu-system-x86_64"
+PROGRAM_LIST="git curl wget qemu-system-x86_64"
 for program in $PROGRAM_LIST; do
 	if ! which $program; then
 		echo "Error: $program is not installed."
