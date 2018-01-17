@@ -2,15 +2,11 @@
 
 ./init.sh
 
-UBUNTU_CLOUD=https://jenkins.liquiddemo.org/job/liquidinvestigations/job/factory/job/master/lastSuccessfulBuild/artifact/cloud-x86_64-image.tar.gz
+UBUNTU_CLOUD=https://jenkins.liquiddemo.org/job/liquidinvestigations/job/factory/job/master/lastSuccessfulBuild/artifact/xenial-x86_64.factory.gz
 LIQUID_CLOUD=https://jenkins.liquiddemo.org/job/liquidinvestigations/job/setup/view/change-requests/job/master/lastSuccessfulBuild/artifact/liquid-cloud-x86_64-raw.img.gz
 
-mkdir -pv factory/images/cloud-x86_64
 (
-  cd factory/images/cloud-x86_64
-  curl -L $UBUNTU_CLOUD > disk.tar.gz
-  zcat disk.tar.gz | tar -x
-  rm disk.tar.gz
+  curl -L $UBUNTU_CLOUD | zcat | ./factory/factory import cloud-x86_64
 )
 
 mkdir -pv factory/images/liquid-cloud-x86_64
