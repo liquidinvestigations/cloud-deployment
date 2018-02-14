@@ -6,7 +6,12 @@ Downloads and sets up VMs to work on the `web-ui` repo in the Liquid Investigati
 
 1. Install `socat`. Then, install all dependencies marked in [the factory readme](https://github.com/liquidinvestigations/factory).
 2. Run `./download.sh`.
-3. Run `./launch_web_ui.sh` and wait for it to boot.
+3. Run a command to boot the VM:
+
+	- `./launch_liquid.sh --persist` to have a working instance
+	- `./launch_liquid.sh` to test the VM in single-use VM
+	- `./launch_web_ui.sh` for development on the Web UI (to mount and use the local `web_ui` repo)
+
 4. Run `./socat.sh` to do port forwarding.
 5. Add the following lines to your `/etc/hosts` file:
 
@@ -25,7 +30,3 @@ Downloads and sets up VMs to work on the `web-ui` repo in the Liquid Investigati
 
 The `web-ui` folder will be shared with the VM's `/opt/web-ui` dir.
 The `ui-templates` folder will be shared with the VM's `/opt/ui-templates` dir.
-
-## Steps for manual testing of the `liquid-cloud-x86_64` image
-
-Do the same as above, but at step `3.` use `./launch_liquid.sh`, which does not override the web-ui repo.
