@@ -18,7 +18,7 @@ mkdir -pv factory/images/liquid-cloud-x86_64
   echo '{"login": {"username": "liquid-admin", "password": "liquid"}}' > config.json
 )
 
-factory/factory run --share setup:/mnt/setup --share factory/images/liquid-cloud-x86_64:/mnt/liquid /mnt/setup/bin/with-image-chroot /mnt/liquid/disk.img bash /opt/setup/ci/prepare-image-for-testing
+factory/factory run --image cloud-x86_64 --share setup:/mnt/setup --share factory/images/liquid-cloud-x86_64:/mnt/liquid /mnt/setup/bin/with-image-chroot /mnt/liquid/disk.img bash /opt/setup/ci/prepare-image-for-testing
 
 set +x
 echo ""
