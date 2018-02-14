@@ -16,6 +16,7 @@ Downloads and sets up VMs to work on the `web-ui` repo in the Liquid Investigati
 127.0.0.1 davros.liquid.example.org
 127.0.0.1 dokuwiki.liquid.example.org
 127.0.0.1 matrix.liquid.example.org
+127.0.0.1 riot.liquid.example.org
 127.0.0.1 hypothesis.liquid.example.org
 127.0.0.1 client.hypothesis.liquid.example.org
 ```
