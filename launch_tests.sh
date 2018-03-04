@@ -4,7 +4,7 @@ factory/factory run \
 	--smp 4 \
 	--memory 4096 \
 	--share guest-scripts:/mnt/scripts \
-	--share ../repos/setup:/opt/setup \
+	--share setup:/opt/setup \
 	--tcp 10080:80 \
 	--tcp 10022:22 \
 	/mnt/scripts/liquid_vm_test.sh \
