@@ -10,6 +10,7 @@ Downloads and sets up VMs to work on the `web-ui` repo in the Liquid Investigati
 
 	- `./launch_liquid.sh --persist` to have a working instance
 	- `./launch_liquid.sh` to test the VM in single-use VM
+	- `./launch_liquid_shell.sh` to log into the VM
 	- `./launch_web_ui.sh` for development on the Web UI (to mount and use the local `web_ui` repo)
 
 4. Run `./socat.sh` to do port forwarding.
