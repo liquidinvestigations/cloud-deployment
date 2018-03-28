@@ -1,0 +1,3 @@
+#!/bin/bash -ex
+
+ls usb.raw || qemu-img create -f raw usb.raw 4G

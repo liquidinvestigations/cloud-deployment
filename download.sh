@@ -5,10 +5,12 @@
 UBUNTU_CLOUD=https://jenkins.liquiddemo.org/job/liquidinvestigations/job/factory/job/master/lastSuccessfulBuild/artifact/xenial-x86_64.factory.gz
 LIQUID_CLOUD=https://jenkins.liquiddemo.org/job/liquidinvestigations/job/setup/view/change-requests/job/master/lastSuccessfulBuild/artifact/liquid-cloud-x86_64-raw.img.gz
 
+rm -rf factory/images/cloud-x86_64 || true
 (
   curl -L $UBUNTU_CLOUD | zcat | ./factory/factory import cloud-x86_64
 )
 
+rm -rf factory/images/liquid-cloud-x86_64 || true
 mkdir -pv factory/images/liquid-cloud-x86_64
 (
   cd factory/images/liquid-cloud-x86_64
