@@ -1,0 +1,3 @@
+#!/bin/bash -ex
+
+factory/factory run --image cloud-x86_64 --share setup:/mnt/setup --share factory/images/liquid-cloud-x86_64:/mnt/liquid /mnt/setup/bin/with-image-chroot /mnt/liquid/disk.img touch /opt/common/LIQUID_EXTERNAL_DISABLE
